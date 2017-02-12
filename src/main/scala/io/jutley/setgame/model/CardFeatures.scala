@@ -24,14 +24,10 @@ case object Striped  extends CardShading
 case object Outlined extends CardShading
 
 object CardFeatures {
-  Set()
-  Set(1, 2, 3)
-  scala.collection.Set.apply()
-  scala.collection.Set(Red, Purple, Green)
-  val colors   = scala.collection.Set(Red, Purple, Green)
-  val shapes   = Set(Oval, Squiggle, Diamond)
-  val numbers  = Set(One, Two, Three)
-  val shadings = Set(Solid, Striped, Outlined)
+  val colors   = Seq(Red, Purple, Green)
+  val shapes   = Seq(Oval, Squiggle, Diamond)
+  val numbers  = Seq(One, Two, Three)
+  val shadings = Seq(Solid, Striped, Outlined)
 
-  val features = Set(colors, shapes, numbers, shadings)
+  val features = Seq(colors, shapes, numbers, shadings)
 }
