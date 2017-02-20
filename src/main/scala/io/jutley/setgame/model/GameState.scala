@@ -26,12 +26,17 @@ case class GameState(players: Seq[Player], deck: Seq[Card], playArea: Seq[Card],
 
   def claimNoSets(player: Player): GameState = {
     val newNoSetClaims = noSetClaims + player
-    deck match {
-      case Seq() => this.copy(noSetClaims = newNoSetClaims)
+    players.toSet match {
+      case s if s == newNoSetClaims =>
+        deck match {
+          case Seq() => this.copy(noSetClaims = newNoSetClaims)
+          case _ =>
+            val newDeck = deck.drop(SetSize)
+            val newPlayArea = playArea ++ deck.take(SetSize)
+            this.copy(deck = newDeck, playArea = newPlayArea, noSetClaims = Set.empty)
+        }
       case _ =>
-        val newDeck = deck.drop(SetSize)
-        val newPlayArea = playArea ++ deck.take(SetSize)
-        this.copy(deck = newDeck, playArea = newPlayArea, noSetClaims = Set.empty)
+        this.copy(noSetClaims = newNoSetClaims)
     }
   }
 }

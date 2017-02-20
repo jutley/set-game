@@ -1,0 +1,33 @@
+html {
+    font-family: monospace;
+}
+
+#play-area {
+    border: medium solid black;
+    overflow: hidden;
+}
+
+.play-area-card {
+    border: thin solid black;
+    padding: 1em;
+    margin: 1em;
+    width: 8em;
+    float: left;
+}
+
+.play-area-card img {
+    width: 100%;
+}
+
+.selected {
+    border-color: red;
+    background-color: #EEE;
+}
+
+#deck-details {
+    margin: 1em 0;
+}
+
+#player-details {
+    margin: 1em 0;
+}

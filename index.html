@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="setgame.css" />
+    <title>Set Game</title>
+</head>
+<body>
+
+    <!-- Include JavaScript dependencies -->
+    <script type="text/javascript" src="./target/scala-2.11/setgame-jsdeps.js"></script>
+    <!-- Include Scala.js compiled code -->
+    <script type="text/javascript" src="./target/scala-2.11/setgame-fastopt.js"></script>
+    <!-- Run app -->
+    <script type="text/javascript">
+        io.jutley.setgame.webview.SetGameApp().main();
+    </script>
+
+    <h1>Set Game</h1>
+
+    <div id="play-area"></div>
+    <div id="deck-details"></div>
+    <table id="player-details"></table>
+
+</body>
+</html>
